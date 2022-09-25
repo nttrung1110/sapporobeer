@@ -3,11 +3,11 @@
 :root {
     // font
     --YakuHanJP: YakuHanJP,
-    "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN",
-    "Noto Sans JP",
-    Meiryo,
-    sans-serif;
+        "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN",
+        "Noto Sans JP",
+        Meiryo,
+        sans-serif;
 
     // color
     --white: #FFFFFF;
@@ -39,6 +39,11 @@ body {
     color: var(--black-2);
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 img {
     display: block;
 }
@@ -51,6 +56,6 @@ input,
 }
 
 a {
-    color: var(--black-2);
+    display: block;
     text-decoration: none;
 }

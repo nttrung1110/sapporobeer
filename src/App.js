@@ -1,11 +1,40 @@
-import Layout from "./layout";
-import LandingPage from "./pages/LandingPage";
+import { Fragment } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { publicRoutes } from "~/routes/index";
+import DefaultLayout from "./layout";
 
 const App = () => {
   return (
-    <Layout>
-      <LandingPage />
-    </Layout>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          {publicRoutes.map((route, index) => {
+            let Layout = DefaultLayout;
+
+            if (route.layout) {
+              Layout = route.layout;
+            } else if (route.layout === null) {
+              Layout = Fragment;
+            }
+
+            const Page = route.component;
+
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              />
+            );
+          })}
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 

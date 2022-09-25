@@ -1,15 +1,33 @@
 import PropTypes from "prop-types";
 import classNames from "classnames/bind";
-import styles from "./Layout.module.scss";
+import styles from "./DefaultLayout.module.scss";
+import Header from "./components/Header";
+import { useSelector } from "react-redux";
 
 const cx = classNames.bind(styles);
 
-const Layout = ({ children }) => {
-  return <div className={cx("wrapper")}>{children}</div>;
+const DefaultLayout = ({ children }) => {
+  const { showOverlay } = useSelector((state) => state.layout);
+
+  console.log(showOverlay);
+
+  return (
+    <div className={cx("wrapper")}>
+      <Header />
+
+      {children}
+
+      <div
+        className={cx("overlay", {
+          active: showOverlay && "active",
+        })}
+      ></div>
+    </div>
+  );
 };
 
-Layout.propTypes = {
+DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default DefaultLayout;
