@@ -9,8 +9,6 @@ const cx = classNames.bind(styles);
 const DefaultLayout = ({ children }) => {
   const { showOverlay } = useSelector((state) => state.layout);
 
-  console.log(showOverlay);
-
   return (
     <div className={cx("wrapper")}>
       <Header />
