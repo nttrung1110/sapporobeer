@@ -9,6 +9,18 @@ const svgs = {
   sound_on: require("~/assets/svgs/sound_on.svg").default,
   mv_txt: require("~/assets/svgs/mv_txt.svg").default,
   mv_txt_sp: require("~/assets/svgs/mv_txt_sp.svg").default,
+  product_h2: require("~/assets/svgs/product_h2.svg").default,
+  product_lead1: require("~/assets/svgs/product_lead1.svg").default,
+  product_lead2: require("~/assets/svgs/product_lead2.svg").default,
+  product_lead3: require("~/assets/svgs/product_lead3.svg").default,
+  product_obj_txt: require("~/assets/svgs/product_obj_txt.svg").default,
+  product_txt1: require("~/assets/svgs/product_txt1.svg").default,
+  product_txt2: require("~/assets/svgs/product_txt2.svg").default,
+  product_txt3: require("~/assets/svgs/product_txt3.svg").default,
+  product_txt4: require("~/assets/svgs/product_txt4.svg").default,
+  product_txt5: require("~/assets/svgs/product_txt5.svg").default,
+  product_txt6: require("~/assets/svgs/product_txt6.svg").default,
+  product_txt7: require("~/assets/svgs/product_txt7.svg").default,
 };
 
 export default svgs;
