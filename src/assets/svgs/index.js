@@ -21,6 +21,8 @@ const svgs = {
   product_txt5: require("~/assets/svgs/product_txt5.svg").default,
   product_txt6: require("~/assets/svgs/product_txt6.svg").default,
   product_txt7: require("~/assets/svgs/product_txt7.svg").default,
+  product_box: require("~/assets/svgs/product_box.svg").default,
+  bnr: require("~/assets/svgs/bnr.svg").default,
 };
 
 export default svgs;

@@ -1,15 +1,17 @@
 import classNames from "classnames/bind";
 import { useInView } from "react-intersection-observer";
+import images from "~/assets/images";
 import svgs from "~/assets/svgs";
 import Header from "../components/Header";
 import styles from "./Home.module.scss";
-import images from "~/assets/images";
 
 const cx = classNames.bind(styles);
 
 const Home = () => {
   const [mvRef, mvInView] = useInView({ triggerOnce: true });
   const [productRef, productInView] = useInView({ triggerOnce: true });
+  const [boxRef, boxInView] = useInView({ triggerOnce: true });
+  const [buyRef, buyInView] = useInView({ triggerOnce: true });
 
   return (
     <main className={cx("layout-main")}>
@@ -72,7 +74,29 @@ const Home = () => {
             <img className={cx("img2")} src={svgs.product_obj_txt} alt="" />
           </div>
         </div>
-        <div className={cx("box")}>box</div>
+        <div
+          ref={boxRef}
+          className={cx("box", { active: boxInView && "active" })}
+        >
+          <img src={svgs.product_box} alt="" />
+          <p>
+            機能性関与成分：クエン酸2700mg(350ml当たり) …
+            クエン酸は日常生活や運動後の一時的な疲労感を軽減することが報告されています。
+          </p>
+        </div>
+        <div
+          ref={buyRef}
+          className={cx("buy", { active: buyInView && "active" })}
+        >
+          <p>購入はこちらから!</p>
+          <a
+            href="https://www.amazon.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={svgs.bnr} alt="" width="462" />
+          </a>
+        </div>
       </section>
     </main>
   );
