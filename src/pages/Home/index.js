@@ -113,6 +113,8 @@ const Home = () => {
             ]}
             sub={{ src: svgs.scene1_sub, width: "63" }}
             right={true}
+            videoId={"u-UImm0uS-s"}
+            videoTitle={"サッポロ LEMON'S FREE　「リモートワーク篇」　15秒"}
           />
 
           <SceneBlock
@@ -128,6 +130,8 @@ const Home = () => {
             ]}
             sub={{ src: svgs.scene2_sub, width: "63" }}
             left={true}
+            videoId={"Zn672p2xnNI"}
+            videoTitle={"サッポロ LEMON'S FREE　「帰宅篇」　15秒"}
           />
 
           <SceneBlock
@@ -144,6 +148,8 @@ const Home = () => {
             ]}
             sub={{ src: svgs.scene3_sub, width: "63" }}
             right={true}
+            videoId={"_FoD88w_F6I"}
+            videoTitle={"サッポロ LEMON'S FREE　「寝る前篇」　15秒"}
           />
         </ul>
       </section>

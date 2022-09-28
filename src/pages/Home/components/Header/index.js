@@ -1,18 +1,22 @@
 import classNames from "classnames/bind";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import svgs from "~/assets/svgs";
+import { toggleAudio, toggleLayoutAudio } from "~/redux/layoutSlice";
 import styles from "./Header.module.scss";
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
-  const [playAudio, setPlayAudio] = useState(false);
+  const { playAudio } = useSelector((state) => state.layout);
+  const dispatch = useDispatch();
 
   const audioRef = useRef(null);
 
   const handlePlayAudio = () => {
-    setPlayAudio((prev) => !prev);
+    dispatch(toggleAudio(!playAudio));
+    dispatch(toggleLayoutAudio(!playAudio));
   };
 
   useEffect(() => {
@@ -21,7 +25,7 @@ const Header = () => {
     } else {
       audioRef.current.pause();
     }
-  }, [playAudio]);
+  }, [dispatch, playAudio]);
 
   return (
     <section className={cx("header")}>

@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import images from "~/assets/images";
-import { showOverlay, hideOverlay } from "~/redux/layoutSlice";
+import { toggleOverLay } from "~/redux/layoutSlice";
 import styles from "./Dropdown.module.scss";
 
 const cx = classNames.bind(styles);
@@ -22,11 +22,11 @@ const Dropdown = () => {
         })}
         onMouseEnter={() => {
           setShowMenu(true);
-          dispatch(showOverlay());
+          dispatch(toggleOverLay(true));
         }}
         onMouseLeave={() => {
           setShowMenu(false);
-          dispatch(hideOverlay());
+          dispatch(toggleOverLay(false));
         }}
       >
         商品情報
@@ -37,11 +37,11 @@ const Dropdown = () => {
         })}
         onMouseEnter={() => {
           setShowMenu(true);
-          dispatch(showOverlay());
+          dispatch(toggleOverLay(true));
         }}
         onMouseLeave={() => {
           setShowMenu(false);
-          dispatch(hideOverlay());
+          dispatch(toggleOverLay(false));
         }}
       >
         <div className={cx("wrapper")}>

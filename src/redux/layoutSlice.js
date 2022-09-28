@@ -4,18 +4,24 @@ const layoutSlice = createSlice({
   name: "layout",
   initialState: {
     showOverlay: false,
+    playAudio: false,
+    layoutAudio: false,
   },
   reducers: {
-    showOverlay(state) {
-      state.showOverlay = true;
+    toggleOverLay(state, action) {
+      state.showOverlay = action.payload;
     },
-    hideOverlay(state) {
-      state.showOverlay = false;
+    toggleAudio(state, action) {
+      state.playAudio = action.payload;
+    },
+    toggleLayoutAudio(state, action) {
+      state.layoutAudio = action.payload;
     },
   },
   extraReducers: {},
 });
 
-export const { showOverlay, hideOverlay } = layoutSlice.actions;
+export const { toggleOverLay, toggleAudio, toggleLayoutAudio } =
+  layoutSlice.actions;
 
 export default layoutSlice.reducer;
