@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import gifs from "~/assets/gifs";
 import images from "~/assets/images";
 import svgs from "~/assets/svgs";
+import FaqBlock from "./components/FaqBlock";
 import Header from "./components/Header";
 import SceneBlock from "./components/SceneBlock";
 import TextLead from "./components/TextLead";
@@ -152,6 +153,91 @@ const Home = () => {
             videoTitle={"サッポロ LEMON'S FREE　「寝る前篇」　15秒"}
           />
         </ul>
+      </section>
+
+      <section className={cx("faq")}>
+        <TextTitle data={{ src: svgs.faq_h2, width: "190" }} />
+
+        <FaqBlock
+          q_svg={svgs.q1}
+          q_title={"いつ飲むのが効果的ですか？"}
+          a_text={["飲むタイミングは特に決まっておりません。"]}
+        />
+
+        <FaqBlock
+          q_svg={svgs.q2}
+          q_title={"1日の摂取目安量を教えてください。"}
+          a_text={["1日1回1本を目安にお飲みください。"]}
+        />
+
+        <FaqBlock
+          q_svg={svgs.q3}
+          q_title={"「機能性表示食品」とは何ですか？"}
+          a_text={[
+            "「機能性表示食品」とは、事業者の責任において科学的根拠に基づいた機能性を表示した食品のことです。",
+            "国が定めるルールに基づき、販売前に安全性及び機能性の根拠に関する情報などが消費者庁長官へ届け出られたものです。",
+          ]}
+        />
+
+        <FaqBlock
+          q_svg={svgs.q4}
+          q_title={"「特定保健用食品（トクホ）」とは何ですか？"}
+          a_text={[
+            "健康の維持増進に役立つことが科学的根拠に基づいて認められ、特定の保健の目的が期待できることの表示が許可されている食品です。",
+            "表示されている効果や安全性 については国が審査を行い、食品ごとに消費者庁長官が許可しています。",
+          ]}
+        />
+
+        <FaqBlock
+          q_svg={svgs.q5}
+          q_title={"特定保健用食品と機能性表示食品との違いを教えてください。"}
+          a_text={[
+            "特定保健用食品は効果や安全性について国の審査を経て許可されたものです。",
+            "機能性表示食品は国の審査はなく事業者の責任で機能性を表示するものです。",
+          ]}
+        />
+
+        <div className={cx("note")}>
+          <div className={cx("box")}>
+            <p>
+              <span>◇</span>1日当たりの摂取目安量：1本（350ml）
+            </p>
+            <p>
+              <span>◇</span>
+              摂取の方法：1日1回1本を目安にそのままお飲みください。
+            </p>
+            <p>
+              <span>◇</span>
+              摂取上の注意：本品は多量摂取により疾病が治癒したり、より健康が増進するものではありません。
+            </p>
+            <p>
+              <span>●</span>
+              本品は、疾病の診断、治療、予防を目的としたものではありません。
+            </p>
+            <p>
+              <span>●</span>
+              疾病に罹患している場合は医師に、医薬品を服用している場合は医師、薬剤師に相談してください。
+            </p>
+            <p>
+              <span>●</span>
+              本品は、疾病に罹患している者、未成年者、妊産婦（妊娠を計画している者を含む。）及び授乳婦を対象に開発された食品ではありません。
+            </p>
+            <p>
+              <span>●</span>
+              体調に異変を感じた際は、速やかに摂取を中止し、医師に相談してください。
+            </p>
+            <p>
+              <span>●</span>
+              本品は、事業者の責任において特定の保健の目的が期待できる旨を表示するものとして、消費者庁長官に届出されたものです。
+              <br />
+              ただし、特定保健用食品と異なり、消費者庁長官による個別審査を受けたものではありません。​
+            </p>
+          </div>
+          <div className={cx("link")}>
+            <span>届出番号G538</span>
+            <a href="/">消費者庁届出情報の詳細はこちら</a>
+          </div>
+        </div>
       </section>
     </main>
   );

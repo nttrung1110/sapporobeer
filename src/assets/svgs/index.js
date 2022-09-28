@@ -42,6 +42,13 @@ const svgs = {
   scene3_sub: require("~/assets/svgs/scene3_sub.svg").default,
   scene3_txt1: require("~/assets/svgs/scene3_txt1.svg").default,
   scene3_txt2: require("~/assets/svgs/scene3_txt2.svg").default,
+  faq_h2: require("~/assets/svgs/faq_h2.svg").default,
+  a: require("~/assets/svgs/a.svg").default,
+  q1: require("~/assets/svgs/q1.svg").default,
+  q2: require("~/assets/svgs/q2.svg").default,
+  q3: require("~/assets/svgs/q3.svg").default,
+  q4: require("~/assets/svgs/q4.svg").default,
+  q5: require("~/assets/svgs/q5.svg").default,
 };
 
 export default svgs;

@@ -236,5 +236,68 @@
 
 .scene {
     width: var(--home-page-width);
-    margin: 0 auto;
+    margin: 0 auto 220px;
+}
+
+.faq {
+    width: var(--home-page-width);
+    margin: 0 auto 220px;
+
+    .note {
+        margin-top: 120px;
+
+        .box {
+            padding: 30px 45px;
+            border: 2px solid var(--black);
+            margin-bottom: 60px;
+
+            p {
+                position: relative;
+                margin-bottom: 5px;
+                padding-left: 1.5em;
+                font-size: 1.3rem;
+                line-height: 1.4;
+                color: var(--black);
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                display: inline-block;
+                margin-right: 10px;
+                padding: 5px;
+                border: 2px solid var(--black);
+                color: var(--black);
+                font-weight: 700;
+                line-height: 1.2;
+                letter-spacing: .1em;
+            }
+
+            a {
+                font-weight: 700;
+                color: var(--black);
+                letter-spacing: .1em;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    margin-left: 5px;
+                    width: 10px;
+                    height: 10px;
+                    background-image: url("../../assets/svgs/icon-window_bg01.svg");
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
 }

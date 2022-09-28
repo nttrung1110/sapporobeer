@@ -1,0 +1,51 @@
+.block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+
+    dt {
+        position: relative;
+        padding: 12px 10px 12px 100px;
+        margin-bottom: 15px;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.4;
+        color: var(--black);
+        background-color: rgba(255, 255, 255, 0.3);
+
+        span {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 6%;
+            background-color: var(--black);
+            padding: 7px 7px 5px;
+            border-radius: 7px;
+        }
+    }
+
+    dd {
+        position: relative;
+        padding: 12px 10px 12px 100px;
+        margin-bottom: 30px;
+        font-size: 1.6rem;
+        line-height: 1.8;
+        color: var(--black);
+
+        span {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 65px;
+            background-color: var(--pink);
+            padding: 8px 0px 8px;
+            border-radius: 7px;
+            text-align: center;
+
+            img {
+                width: 35%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
