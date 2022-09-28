@@ -53,93 +53,7 @@
 
 .product {
     width: var(--home-page-width);
-    margin: 0 auto;
-
-    .title {
-        position: relative;
-        padding-bottom: 10px;
-
-        img {
-            width: 34.4%;
-            margin: 0 auto;
-        }
-
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--black-2);
-        }
-    }
-
-    .lead {
-        margin-top: 60px;
-
-        span {
-            z-index: 1;
-            position: relative;
-            display: block;
-            width: fit-content;
-            margin-bottom: -1.2px;
-            clip-path: inset(0 100% 5px 0);
-            transition: 1.2s all ease-out;
-
-            &:before {
-                content: '';
-                width: 0;
-                height: 0;
-                border-right: solid 5px transparent;
-                border-top: solid 5px transparent;
-                border-left: solid 5px #fff;
-                position: absolute;
-                top: 0;
-                left: calc(100% - 0px);
-                z-index: -1;
-            }
-
-            &:after {
-                content: "";
-                z-index: -1;
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                width: 100%;
-                height: 100%;
-                background-color: var(--white);
-            }
-
-            &.two {
-                transition-delay: 1.2s;
-            }
-
-            &.three {
-                transition-delay: 2.4s;
-
-                &:before {
-                    top: auto;
-                    right: auto;
-                    bottom: -4px;
-                    left: -5px;
-                    transform: rotate(180deg);
-                }
-            }
-        }
-
-        i {
-            z-index: 1;
-            position: relative;
-            display: block;
-            width: fit-content;
-            background-color: var(--pink);
-        }
-
-        img {
-            padding: 10px 15px;
-        }
-    }
+    margin: 0 auto 220px;
 
     .content {
         position: relative;
@@ -305,12 +219,6 @@
 
 
     &.active {
-        .lead {
-            span {
-                clip-path: inset(0 -5px -5px 0);
-            }
-        }
-
         .text {
             img {
                 transform: translateX(0);
@@ -324,4 +232,9 @@
             opacity: 1;
         }
     }
+}
+
+.scene {
+    width: var(--home-page-width);
+    margin: 0 auto;
 }
