@@ -239,6 +239,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className={cx("attention")}>
+        <div className={cx("wrapper")}>
+          <img src={svgs.attention} alt="" width="540" />
+        </div>
+      </section>
     </main>
   );
 };

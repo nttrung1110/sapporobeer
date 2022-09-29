@@ -49,6 +49,7 @@ const svgs = {
   q3: require("~/assets/svgs/q3.svg").default,
   q4: require("~/assets/svgs/q4.svg").default,
   q5: require("~/assets/svgs/q5.svg").default,
+  attention: require("~/assets/svgs/attention.svg").default,
 };
 
 export default svgs;
