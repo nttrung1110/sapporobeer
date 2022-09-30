@@ -4,9 +4,9 @@ import styles from "./Breadcrumb.module.scss";
 
 const cx = classNames.bind(styles);
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ breadcrumbRef }) => {
   return (
-    <div className={cx("breadcrumb")}>
+    <div ref={breadcrumbRef} className={cx("breadcrumb")}>
       <ul>
         <li>
           <a href="/">

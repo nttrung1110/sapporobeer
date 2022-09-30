@@ -9,6 +9,7 @@ const images = {
   product_obj: require("~/assets/images/product_obj.png"),
   close: require("~/assets/images/close.png"),
   breadcrumbs_img01: require("~/assets/images/breadcrumbs_img01.png"),
+  footer_note_img01: require("~/assets/images/footer-note_img01.png"),
 };
 
 export default images;

@@ -50,6 +50,16 @@ const svgs = {
   q4: require("~/assets/svgs/q4.svg").default,
   q5: require("~/assets/svgs/q5.svg").default,
   attention: require("~/assets/svgs/attention.svg").default,
+  logo_main: require("~/assets/svgs/logo_main.svg").default,
+  sns_img_facebook: require("~/assets/svgs/footer-sns_img_facebook.svg")
+    .default,
+  sns_img_instagram: require("~/assets/svgs/footer-sns_img_instagram.svg")
+    .default,
+  sns_img_twitter: require("~/assets/svgs/footer-sns_img_twitter.svg").default,
+  sns_img_youtube: require("~/assets/svgs/footer-sns_img_youtube.svg").default,
+  group_link_window: require("~/assets/svgs/group-link_window.svg").default,
+  footer_copyright_logo01: require("~/assets/svgs/footer_copyright_logo01.svg")
+    .default,
 };
 
 export default svgs;

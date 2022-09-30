@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import svgs from "~/assets/svgs";
@@ -27,8 +27,23 @@ const Header = () => {
     }
   }, [dispatch, playAudio]);
 
+  const [fixed, setFixed] = useState(false);
+
+  const isFixed = (e) => {
+    const scrollTop = window.scrollY;
+
+    scrollTop > 115 ? setFixed(true) : setFixed(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isFixed);
+    return () => {
+      window.removeEventListener("scroll", isFixed);
+    };
+  });
+
   return (
-    <section className={cx("header")}>
+    <section className={cx("header", { fixed: fixed && "fixed" })}>
       <div className={cx("inner")}>
         <h1 className={cx("logo")}>
           <img src={svgs.logo} alt="" />
