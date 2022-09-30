@@ -8,6 +8,7 @@ const images = {
   product_14: require("~/assets/images/products-list_img14.jpg"),
   product_obj: require("~/assets/images/product_obj.png"),
   close: require("~/assets/images/close.png"),
+  breadcrumbs_img01: require("~/assets/images/breadcrumbs_img01.png"),
 };
 
 export default images;

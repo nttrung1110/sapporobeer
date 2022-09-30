@@ -1,8 +1,9 @@
-import PropTypes from "prop-types";
 import classNames from "classnames/bind";
-import styles from "./DefaultLayout.module.scss";
-import Header from "./components/Header";
+import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import styles from "./DefaultLayout.module.scss";
 
 const cx = classNames.bind(styles);
 
@@ -14,6 +15,8 @@ const DefaultLayout = ({ children }) => {
       <Header />
 
       {children}
+
+      <Footer />
 
       <div
         className={cx("overlay", {
